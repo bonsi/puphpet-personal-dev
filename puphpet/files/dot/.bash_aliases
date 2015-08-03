@@ -61,6 +61,7 @@ alias phpspec='vendor/bin/phpspec'
 alias npmi='npm install --no-bin-links'
 
 alias serve='php artisan serve --host=192.168.56.100 --port=8888'
+alias phpserve='php -S localhost:8888'
 alias cda='composer dumpautoload'
 
 
