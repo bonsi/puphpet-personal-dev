@@ -42,6 +42,10 @@ reset=$(tput -Txterm sgr0)
 # Nicely formatted terminal prompt
 export PS1='\n\[$bold\]\[$black\][\[$dk_blue\]\@\[$black\]]-[\[$green\]\u\[$yellow\]@\[$green\]\h\[$black\]]-[\[$pink\]\w\[$black\]]\[\033[0;33m\]$(__vcs_name) \[\033[00m\]\[$reset\]\n\[$reset\]\$ '
 
+
+#
+#   system aliases
+#
 alias ls='ls -F --color=always'
 alias dir='dir -F --color=always'
 alias ll='ls -l'
@@ -50,21 +54,26 @@ alias rm='rm -i'
 alias mv='mv -iv'
 alias grep='grep --color=auto -in'
 alias ..='cd ..'
-
-source /usr/local/rvm/scripts/rvm
-
-
 alias la='ls -hal --color=always'
 alias sdnow='sudo shutdown -h now'
 
+#
+#   general PHP / Web development aliases
+#
 alias phpspec='vendor/bin/phpspec'
 alias npmi='npm install --no-bin-links'
-
-alias serve='php artisan serve --host=192.168.56.100 --port=8888'
-alias phpserve='php -S localhost:8888'
+alias phpserve='php -S 0.0.0.0:8888'
 alias cda='composer dumpautoload'
 
 
+#
+#   laravel aliases
+#
+alias serve='php artisan serve --host=192.168.56.100 --port=8888'
+alias pa='php artisan'
+alias art='php artisan'
 
 
 
+
+source /usr/local/rvm/scripts/rvm
